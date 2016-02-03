@@ -45,3 +45,28 @@ var car = {
     return this.color;
   }
 };
+
+
+// With an argument
+
+var myApp = myApp || {};
+
+(function(context) {
+  var id = 0;
+
+  context.next = function() {
+    return id++;    
+  };
+
+  context.reset = function() {
+    id = 0;     
+  }
+})(myApp);
+
+myApp.prev = function() {
+  return id--;
+}
+
+myApp.current = function() {
+  return id;
+}

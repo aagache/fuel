@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Lesson 4</title>
-	<script src="js/namespacing/app.js"></script>
-	<script src="js/namespacing/anotherApp.js"></script>
-	<script src="js/module/app.js"></script>
+    <meta charset="UTF-8">
+    <title>Lesson 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="js/namespacing/app.js"></script>
+    <script src="js/namespacing/anotherApp.js"></script>
+    <script src="js/module/app.js"></script>
 </head>
+
 <body>
-	<h1>Lesson 4</h1>
-	<h2>Namespacing &amp; Module Pattern</h2>
+    <div id="wrapper">
+        <h1>Lesson 4</h1>
+        <h2>Module Pattern</h2>
+
+        <div id="about">
+            <h3>engine</h3>
+
+            <h4>private</h4>
+            <ul>
+                <li>gasPrice</li>
+                <li>literNumber <span>(distance, economy)</span></li>
+            </ul>
+
+            <h4>public</h4>
+            <ul>
+                <li>trip <span>(distance, economy)</span></li>
+                <li>calcAutonomy <span>(liters, economy)</span></li>
+                <li>calcFuelEconomy <span>(distance, liters)</span></li>
+                <li>calcFuelUsed <span>(distance, economy)</span></li>
+            </ul>
+
+            <h4>public extended</h4>
+            <ul>
+                <li>model</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
