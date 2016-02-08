@@ -4,10 +4,6 @@
 var engine = (function() {
   var gasPrice = 5; // RON
 
-  var litersNumber = function(distance, economy) {
-    return liters = Math.ceil((economy * distance) / 100);
-  };
-
   var autonomy = function(liters, economy) {
     var distance = Math.ceil((liters * 100) / economy);
 
@@ -31,7 +27,7 @@ var engine = (function() {
       totalPrice = null;
 
     // private methods and variables are accessible inside public functions
-    l = litersNumber(distance, economy);
+    l = parseInt(liters(distance, economy), 10);
     totalPrice = l * gasPrice;
 
     stringBuild = ['Your trip of ',
